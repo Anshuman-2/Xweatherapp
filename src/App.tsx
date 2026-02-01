@@ -49,7 +49,7 @@ function App() {
           </button>
         </div>
         {loading && (
-          <p style={{ color: '#333', marginTop: '0.5rem' }}>Loading data…</p>
+          <p style={{ color: '#333', marginTop: '0.5rem' }}>Loading data...</p>
         )}
         <div className="weather-cards" style={{ display: 'flex', gap: '1rem', marginTop: '2rem', justifyContent: 'center' }}>
           {weather && (
