@@ -26,7 +26,8 @@ function App() {
       setWeather(null);
       window.alert('Failed to fetch weather data');
     } finally {
-      setLoading(false);
+      // Artificial delay for Cypress test visibility
+      setTimeout(() => setLoading(false), 600);
     }
   };
 
