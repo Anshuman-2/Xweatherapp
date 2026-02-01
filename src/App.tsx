@@ -26,7 +26,7 @@ function App() {
       setWeather(null);
       window.alert('Failed to fetch weather data');
     } finally {
-      setLoading(false);
+      setTimeout(() => setLoading(false), 2000);
     }
   };
 
