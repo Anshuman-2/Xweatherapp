@@ -6,14 +6,13 @@ function App() {
   const [city, setCity] = useState('');
   const [weather, setWeather] = useState<any>(null);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState('');
+
 
   const API_KEY = '4bfe2c63d7ec4d5e92365811260102';
 
   const handleSearch = async () => {
     if (!city.trim()) return;
     setLoading(true);
-    setError('');
     setWeather(null);
     try {
       const response = await fetch(
@@ -25,7 +24,6 @@ function App() {
       setWeather(data);
     } catch (err) {
       setWeather(null);
-      setError('Failed to fetch weather data');
       window.alert('Failed to fetch weather data');
     } finally {
       setLoading(false);
