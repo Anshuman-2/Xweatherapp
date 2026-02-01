@@ -33,21 +33,23 @@ function App() {
   return (
     <div className="App">
       <div style={{ background: '#f4faff', padding: '2rem', borderRadius: '8px', maxWidth: 600, margin: '2rem auto' }}>
-        <input
-          type="text"
-          placeholder="Enter city name"
-          value={city}
-          onChange={e => setCity(e.target.value)}
-          style={{ padding: '0.5rem', fontSize: '1rem', marginRight: '1rem' }}
-        />
-        <button
-          style={{ padding: '0.5rem 1rem', fontSize: '1rem', background: '#4caf50', color: '#fff', border: 'none', borderRadius: 4 }}
-          onClick={handleSearch}
-        >
-          Search
-        </button>
+        <div>
+          <input
+            type="text"
+            placeholder="Enter city name"
+            value={city}
+            onChange={e => setCity(e.target.value)}
+            style={{ padding: '0.5rem', fontSize: '1rem', marginRight: '1rem' }}
+          />
+          <button
+            style={{ padding: '0.5rem 1rem', fontSize: '1rem', background: '#4caf50', color: '#fff', border: 'none', borderRadius: 4 }}
+            onClick={handleSearch}
+          >
+            Search
+          </button>
+        </div>
         {loading && (
-          <p style={{ marginTop: '1rem', color: '#333' }}>Loading data…</p>
+          <p style={{ color: '#333', marginTop: '0.5rem' }}>Loading data…</p>
         )}
         <div className="weather-cards" style={{ display: 'flex', gap: '1rem', marginTop: '2rem', justifyContent: 'center' }}>
           {weather && (
